@@ -6,11 +6,19 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ChallengeComponent {
+    }
     interface ExampleComponent {
         "exampleProp": string;
     }
 }
 declare global {
+    interface HTMLChallengeComponentElement extends Components.ChallengeComponent, HTMLStencilElement {
+    }
+    var HTMLChallengeComponentElement: {
+        prototype: HTMLChallengeComponentElement;
+        new (): HTMLChallengeComponentElement;
+    };
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
     }
     var HTMLExampleComponentElement: {
@@ -18,14 +26,18 @@ declare global {
         new (): HTMLExampleComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "challenge-component": HTMLChallengeComponentElement;
         "example-component": HTMLExampleComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface ChallengeComponent {
+    }
     interface ExampleComponent {
         "exampleProp"?: string;
     }
     interface IntrinsicElements {
+        "challenge-component": ChallengeComponent;
         "example-component": ExampleComponent;
     }
 }
@@ -33,6 +45,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "challenge-component": LocalJSX.ChallengeComponent & JSXBase.HTMLAttributes<HTMLChallengeComponentElement>;
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
         }
     }
