@@ -4,10 +4,12 @@ import { Component, h } from '@stencil/core';
   tag: 'challenge-component',
   styleUrl: 'challenge-component.scss',
   shadow: true,
-  // assetsDirs: ['challenge-assets'],
+  // Tried to use local image from assets folder with getAssetPath(),
+  // but didn't manage to make it work
+  // assetsDirs: ['assets'],
 })
 export class ChallengeComponent {
-// eslint-disable-next-line class-methods-use-this
+  // eslint-disable-next-line class-methods-use-this
   public render(): JSX.Element {
     return (
       <div class='component'>
@@ -22,7 +24,7 @@ export class ChallengeComponent {
               <button>Link button</button>
             </div>
           </div>
-          <img class='image' src='https://c4.wallpaperflare.com/wallpaper/588/367/704/nature-water-mountains-landscape-wallpaper-preview.jpg'/>
+          <img alt='serenity image' class='image' src='https://c4.wallpaperflare.com/wallpaper/588/367/704/nature-water-mountains-landscape-wallpaper-preview.jpg'/>
         </div>
       </div>
     );

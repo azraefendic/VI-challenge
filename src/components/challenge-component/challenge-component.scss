@@ -45,6 +45,10 @@ p {
   font-size: .6em;
 }
 
+h3 {
+  margin-top: 0;
+}
+
 button {
   background-color: black;
   border: none;
@@ -74,12 +78,12 @@ button {
     left: 2vw;
   }
 
-  h3 {
-    margin: 0;
-  }
-
   .text {
     width: 80%;
+  }
+
+  h3 {
+    margin: 0;
   }
 
   button {
