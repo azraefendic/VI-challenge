@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'challenge-component',
@@ -9,17 +9,21 @@ import { Component, h } from '@stencil/core';
   // assetsDirs: ['assets'],
 })
 export class ChallengeComponent {
+  @Prop() header = 'CtA - Main conversion';
+
+  @Prop() headline = 'A wonderful serenity has taken possession';
+
   // eslint-disable-next-line class-methods-use-this
   public render(): JSX.Element {
     return (
       <div class='component'>
-        <header>CtA - Main conversion</header>
+        <header>{this.header}</header>
         <div class='container'>
           <div class='content'>
             <div class='text'>
-              <h3>A wonderful serenity has taken possession</h3>
+              <h3>{this.headline}</h3>
               <p>
-                A wonderful serenity has taken possession of my entire soul, like these sweet...
+                <slot></slot>
               </p>
               <button>Link button</button>
             </div>

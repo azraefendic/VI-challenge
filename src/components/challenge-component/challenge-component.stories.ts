@@ -1,3 +1,4 @@
+import { text } from '@storybook/addon-knobs';
 import { jsxDecorator } from 'storybook-addon-jsx';
 import readme from './readme.md';
 
@@ -15,5 +16,8 @@ export default {
 };
 
 export const empty = (): string => `
-  <challenge-component></challenge-component>
+  <challenge-component>
+    ${text('main content knob',
+    'A wonderful serenity has taken possession of my entire soul, like these sweet...')}
+  </challenge-component>‚
 `;

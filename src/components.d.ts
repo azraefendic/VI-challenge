@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ChallengeComponent {
+        "header": string;
+        "headline": string;
     }
     interface ExampleComponent {
         "exampleProp": string;
@@ -32,6 +34,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ChallengeComponent {
+        "header"?: string;
+        "headline"?: string;
     }
     interface ExampleComponent {
         "exampleProp"?: string;
