@@ -14,7 +14,7 @@ export class ChallengeComponent {
         <header>CtA - Main conversion</header>
         <div class='container'>
           <div class='content'>
-            <div>
+            <div class='text'>
               <h3>A wonderful serenity has taken possession</h3>
               <p>
                 A wonderful serenity has taken possession of my entire soul, like these sweet...
@@ -22,9 +22,7 @@ export class ChallengeComponent {
               <button>Link button</button>
             </div>
           </div>
-          <div class='image'>
-            <img src='https://c4.wallpaperflare.com/wallpaper/588/367/704/nature-water-mountains-landscape-wallpaper-preview.jpg'/>
-          </div>
+          <img class='image' src='https://c4.wallpaperflare.com/wallpaper/588/367/704/nature-water-mountains-landscape-wallpaper-preview.jpg'/>
         </div>
       </div>
     );
